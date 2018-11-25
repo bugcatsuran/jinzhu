@@ -7,21 +7,25 @@ const cities = [{
     id: 1001
   }
 ]
-
+const db = wx.cloud.database();
+const demand = db.collection('demand');
 Page({
 
   /**
    * 页面的初始数据
    */  
   data: {
-    cities
+    cities,
+    detail: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.setData({
+      id: options.id
+    });
   },
 
   /**
@@ -35,7 +39,40 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    this.getDemand()
+  },
 
+  getDemand: function () {
+    const self = this;
+    const promise = new Promise((resolve, reject) => {
+      const id = self.data.id;
+      console.log(id);
+      demand.where({
+        _id: id
+      })
+        .get({
+          success: function (res) {
+            console.log(res)
+            if (res.data[0]) {
+              self.setData({
+                detail: res.data[0]
+              }, () => {
+                if (res.data[0].photoId) {
+                  self.getPhotoUrl(res.data[0].photoId)
+                }
+              })
+            }
+            wx.hideLoading()
+          },
+          fail: function (err) {
+            wx.showModal({
+              content: err,
+            })
+            wx.hideLoading()
+          }
+        })
+    })
+    return promise
   },
 
   /**

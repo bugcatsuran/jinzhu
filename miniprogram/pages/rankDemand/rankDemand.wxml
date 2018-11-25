@@ -19,7 +19,7 @@
 </view>
 
 <block wx:for="{{rankList}}" wx:key="index">
-	<view class='rank_item'>
+	<view class='rank_item' bindtap="toDetail" id="{{item._id}}">
 		<view class='fee'>
 			{{item.fee}}
 		</view>
