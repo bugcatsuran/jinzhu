@@ -43,7 +43,12 @@ Page({
 		})
 		return promise
 	},
-
+  toDetail: function(e) {
+    console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: '../detailDemand/detailDemand?id=' + e.currentTarget.id,
+    })
+  },
 	onPullDownRefresh: function () {
 
 	},
