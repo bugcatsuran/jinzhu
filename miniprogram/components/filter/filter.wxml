@@ -1,0 +1,33 @@
+<view class='filter'>
+  <block wx:for="{{filterList}}" wx:key="index">
+    <view 
+			class="filter_item_shell" 
+			bindtap='tapFilter' 
+			data-filter="{{item}}"
+		>
+      <view 
+				class="{{result[item.value]?'text active':'text'}}" 
+			>
+				{{result[item.value]?result[item.value]:item.name}}
+			</view>
+			<image src='../../assets/icons/filter-u.png' class='filter_icon' wx:if="{{showItems&&filter==item.value}}"></image>
+      <image src='../../assets/icons/filter-d.png' class='filter_icon' wx:else></image>
+    </view>
+  </block>
+</view>
+
+<view class='filter_pop' wx:if="{{showItems}}">
+	<view>
+		<view class="reset" bindtap='reset'>
+			重置
+		</view>
+		<block wx:for="{{items}}" wx:key="index">
+			<view 
+				class="{{item.name==result[filter]?'filter_item active':'filter_item '}}" 
+				bindtap="chooseFilter" 
+				data-item="{{item.name}}">
+				{{item.name}}
+			</view>
+		</block>	
+	</view>
+</view>

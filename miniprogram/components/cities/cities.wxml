@@ -1,0 +1,36 @@
+<view class='city_choose' wx:if="{{showCities}}">
+
+  <image 
+		src="{{'../../assets/icons/xMark.png'}}" 
+		class='xMark'
+		bindtap='hideCities'
+	>
+	</image>
+
+  <view class='current_city_shell'>
+    <view class='city_title'>
+      当前定位城市
+    </view>
+    <view class='current_city'>
+      <image src="{{'../../assets/icons/local.png'}}"></image>
+      {{currentCity}}
+    </view>
+  </view>
+
+  <view class='all_city_shell'>
+    <view class='city_title'>
+      已开通城市
+    </view>
+    <view class='cities_shell clear'>
+      <block wx:for="{{cities}}" wx:key="index">
+        <view 
+					class='city_cell fl' 
+					bindtap="chooseCity" 
+					data-city="{{item.name}}">
+          {{item.name}}
+        </view>
+      </block>
+    </view>
+  </view>
+
+</view>

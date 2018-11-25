@@ -1,0 +1,10 @@
+{
+	"usingComponents": {
+		"List": "../../components/list/list",
+		"ListItem": "../../components/listItem/listItem",
+		"Cities": "../../components/cities/cities",	
+		"Filter": "../../components/filter/filter",	
+		"Tab": "../../components/tab/tab"
+	},
+	"enablePullDownRefresh": true
+}

@@ -1,0 +1,27 @@
+/* components/tab/tab.wxss */
+.tab{
+	width: 100%;
+	background: #fff;
+	border-bottom: #ebebeb 1rpx solid;
+	display: flex;
+	justify-content: space-around;
+	color: #333;
+	font-size: 28rpx;
+	z-index: 99;
+}
+.tab_item_shell{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+.tab_item{
+	display: inline-block;
+	text-align: center;
+	height: 90rpx;
+	line-height: 90rpx;
+	box-sizing: border-box;
+}
+.tab_item_active{
+	color: #ff3e54;
+	border-bottom: 5rpx solid #ff3e54;
+}

@@ -1,0 +1,48 @@
+<!-- 城市下拉列表 -->
+<Cities
+	showCities="{{showCities}}"
+	currentCity="{{city}}"
+	bind:changeCity="changeCity"
+	bind:showCities="showCities"
+/>
+
+<view class='main' wx:if="{{!showCities}}">
+	<!-- <view class='title_shell'>
+		<view class='city' bindtap='showCities'>
+			<view class=''>{{city}}</view>
+			<image src='../../assets/icons/arrow-d.png' class='down_icon'/>
+		</view>
+		<input 
+			class='input' 
+			placeholder='请输入学校或科目'
+		>
+			<image src='../../assets/icons/search.png' class='search' mode="aspectFill" bindtap='search'/>
+		</input>
+	</view>	 -->
+
+	<!-- <view class='rank_classify'>
+		<navigator class='classify_item' url='../rankTeacher/rankTeacher'>
+			<image src='../../assets/icons/rank.png' class='classify1'/>
+			<view>家教排行榜</view>
+		</navigator>
+		<navigator class='classify_item' url='../rankDemand/rankDemand'>
+			<image src='../../assets/icons/remand.png' class='classify2'/>
+			<view>每日需求</view>
+		</navigator>
+	</view> -->
+
+	<!-- <Filter/> -->
+
+	<List
+		list="{{rankList}}"
+		bind:goDetail="toDetail"
+	/>
+
+	<!-- <view class='no_more'>
+		当前地区暂无更多家教信息~
+	</view> -->
+</view>
+
+
+
+

@@ -1,0 +1,140 @@
+/* miniprogram/components/list/list.wxss */
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	overflow:hidden;
+	_zoom:1;
+} 
+.color_ff1b37{
+	color: #ff1b37;
+}
+.item{
+	padding: 20rpx 30rpx;
+	background: #fff;
+}
+.item:last-child{
+	border-bottom: 0;
+}
+.item_l{
+	float: left;
+	display: flex;
+	align-items: center;
+}
+.item_l image{
+	width: 150rpx;
+	height: 180rpx;
+	background: #f6f6f6;
+	border-radius: 10rpx;
+}
+.item_r{
+	float: left; 
+	width: calc(100% - 150rpx);
+	max-width: calc(100% - 150rpx);
+	height: 180rpx;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	position: relative;
+	color: gray;
+	padding-left: 30rpx;
+}
+.top{
+	display: flex;
+	align-items: center;
+}
+.name{
+	font-weight: bolder;
+	color: #333;
+}
+.grade{
+	margin-left: 20rpx;
+}
+.subject{
+	margin-left: 10rpx;
+}
+.fee{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: orange;
+}
+.school,.add,.education{
+	font-size: 30rpx;
+	height: 30rpx;
+	line-height: 30rpx; 
+	padding-right: 10rpx;
+	border-right: 1rpx solid grey;
+}
+.add{
+	padding-left: 10rpx;
+}
+.education{
+	padding-left: 10rpx;
+	border-right: none;
+}
+.goods_title{
+	height: 100rpx;
+	line-height: 100rpx;
+	padding-left: 40rpx;
+	font-size: 32rpx;
+	border-bottom:1rpx solid #e6e6e6;
+}
+.plus{
+	height: 56rpx;
+	width: 56rpx;
+}
+.price{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.price > view {
+	font-size: 36rpx;
+}
+.buy_shell{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.buy{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.buy .num{
+	margin: 0 10rpx;
+	width: 40rpx;
+	text-align: center;
+}
+.vip{
+	height: 31rpx;
+	background-color: #ff9c09;
+	border-radius: 6rpx;
+	color: white;
+	font-size: 24rpx;
+	text-align: center;
+	line-height: 31rpx;
+	float: left;
+	margin-top: 10rpx;
+	margin-right: 10rpx;
+	padding: 0 10rpx;
+}
+.original-price{
+	color: grey;
+	text-decoration: line-through;
+	font-size: 30rpx !important;
+	margin-left: 5rpx;
+}
+.go{
+	color: white;
+	background: linear-gradient(90deg,#ff5230 0,#ff1544) ;
+	position: absolute;
+	bottom: -5rpx;
+	right: 5rpx;
+	border-radius: 10rpx;
+	padding: 0 20rpx;
+}

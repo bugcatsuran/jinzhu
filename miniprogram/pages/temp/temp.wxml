@@ -1,0 +1,9 @@
+<view class='message_shell'>
+	小程序消息沟通正在开发中~
+	<view>
+	请您先加老师的微信号
+	<text wx:if="{{contact}}" style="color:red">
+		{{contact}}
+	</text>进行联系哦
+	</view>
+</view>

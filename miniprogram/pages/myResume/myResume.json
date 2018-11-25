@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+		"Modal": "../../components/modal/modal"
+	},
+	"navigationBarTitleText": "编辑简历"
+}

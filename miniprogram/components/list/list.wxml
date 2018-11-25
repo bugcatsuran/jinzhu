@@ -1,0 +1,58 @@
+
+<view class=''>
+
+  <block wx:for="{{list}}" wx:key="{{index}}">
+
+    <view class='item clear' bindtap='goDetail' data-current="{{item._id}}">
+      <view class='item_l'>
+				<ListItem 
+					photoId="{{item.photoId}}"
+					item="{{item}}"
+				/>					
+      </view>
+
+      <view class='item_r'>
+
+        <view class='clear top'>
+          <view class='fl name'>
+            {{item.name}}
+          </view>
+					<view class='fl grade'>
+						{{item.grade}}
+					</view>
+          <view class='fl subject'>
+            {{item.subject}}
+          </view>
+          <view class='fr fee'>
+            {{item.fee}}
+          </view>
+        </view>
+
+        <view class='middle clear'>
+          <view class='fl free_time'>
+            空闲时间：{{item.freeTime}}
+          </view>
+        </view>
+
+        <view class='botom clear'>
+          <view class='fl school'>
+            {{item.school}}
+          </view>
+          <view class='fl add'>
+            {{item.add}}
+          </view>
+          <view class='fl education'>
+            {{item.education}}
+          </view>
+          <view class='fl publish_date'>
+            {{item.publishDate}}
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+
+  </block>
+
+</view>

@@ -1,0 +1,46 @@
+.filter{
+	background: #fff;
+	height: 80rpx;
+	z-index: 99;
+	box-shadow: 0 5rpx 10rpx -5rpx #e1e1e1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30rpx;
+	color: #3d3d3e;
+}
+.filter .text{
+	margin-right: 10rpx;
+}
+.filter_item_shell{
+	display: flex;
+	align-items: center;
+}
+.filter_icon{
+	width: 20rpx;
+	height: 20rpx;
+}
+
+/* 弹出层 */
+.filter_pop{
+	position: absolute;
+	background: #fff;
+	width: 100%;
+	padding: 30rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 10rpx #e1e1e1;
+	z-index: 99;
+	text-align: center;
+}
+.filter_item{
+	padding: 20rpx 0;
+	color: #707070;
+}
+.active{
+	color: orange;
+}
+.reset{
+	color: red;
+}

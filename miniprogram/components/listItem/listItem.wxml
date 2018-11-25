@@ -1,0 +1,11 @@
+
+<!-- <view>
+	<view>
+		{{item.name}}
+	</view> -->
+	<image  
+		class='profile' 
+		src="{{photoUrl}}" 
+		mode="aspectFill">
+	</image>
+<!-- </view> -->

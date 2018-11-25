@@ -1,0 +1,63 @@
+{
+	"description": "项目配置文件",
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx537e05e0950a39dd",
+	"projectname": "%E9%87%91%E7%8C%AA%E5%8A%A9%E5%AD%A6",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的简历",
+					"pathName": "pages/myResume/myResume",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "临时消息",
+					"pathName": "pages/temp/temp",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的需求",
+					"pathName": "pages/myDemand/myDemand"
+				}
+			]
+		}
+	}
+}

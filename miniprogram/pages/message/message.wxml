@@ -1,0 +1,5 @@
+<view class='nomes_container'>
+	<view class='no-mes'>
+		暂无消息
+	</view>
+</view>

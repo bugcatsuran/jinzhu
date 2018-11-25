@@ -1,0 +1,11 @@
+<!--components/modal/modal.wxml-->
+<view wx:if='{{show}}'>
+	<view class='mask' catchtap='tapMask'></view>
+	<view class='modal-content' style='height:{{height}};width:{{width}}'>
+		<scroll-view scroll-y class='main-content'>
+      <slot class='slot'></slot>
+    </scroll-view>
+	</view>
+</view>
+
+	

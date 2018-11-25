@@ -1,0 +1,60 @@
+.title_shell{
+	padding: 15rpx 30rpx;
+	background: #ffd706;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.city{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 20rpx;
+}
+.input{
+	height: 60rpx;
+	border-radius: 30rpx;
+	background: white;
+	background: #f6f6f6;
+	flex: 1;
+	padding-left: 30rpx;
+	position: relative;
+}
+.down_icon{
+	width:60rpx;
+	height: 60rpx;
+}
+.search{
+	position: absolute;
+	top: 4rpx;
+	z-index: 99;
+	right: 0rpx;
+	width: 50rpx;
+	height: 50rpx;
+	padding: 0 20rpx;
+}
+.rank_classify{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 30rpx 0;
+	background: #fff;
+}
+.classify_item{
+	padding: 20rpx;
+	display: flex;
+	align-items: center;
+	width: 40%;
+	border-radius: 20rpx;
+	box-shadow: 0 0 10rpx #e1e1e1;
+}
+.classify1{
+	width: 100rpx;
+	height: 100rpx;
+}
+.classify2{
+	width: 100rpx;
+	height: 100rpx;
+	margin-right: 15rpx;
+}
+

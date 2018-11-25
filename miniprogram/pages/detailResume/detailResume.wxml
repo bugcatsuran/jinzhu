@@ -1,0 +1,54 @@
+<view class='info_shell'>
+  <view class='detail'>
+    <view class='top'>
+      <image src="{{detail.photoUrl}}" class='photo' mode="aspectFill">
+      </image>
+      <view class='base'>
+        <view class='name'>
+          {{detail.name}}
+        </view>
+      </view>
+    </view>
+		<view class='local'>
+			<image src="../../assets/icons/edu.png" class='photo'>
+			</image>
+      {{detail.education}} {{detail.school}}
+    </view>
+    <view class='local'>
+			<image src="../../assets/icons/local2.png">
+			</image>
+      {{detail.city}} {{detail.add}}
+    </view>
+  </view>
+
+  <view class='detail'>
+    <view class='title'>
+      空闲时间
+    </view>
+    <view class='info'>
+      {{detail.freeTime}}
+    </view>
+  </view>
+
+  <view class='detail'>
+    <view class='title'>
+      微信号
+    </view>
+    <view class='info'>
+      {{detail.contactWay}}
+    </view>
+  </view>
+
+  <view class='detail'>
+    <view class='title'>
+      家教荣誉
+    </view>
+    <view class='info'>
+      {{detail.detail}}
+    </view>
+  </view>
+</view>
+
+<view class='contact' bindtap='contact'>
+  联系家教
+</view>

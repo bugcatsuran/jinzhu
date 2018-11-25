@@ -1,0 +1,58 @@
+<view class='top'>
+	<view>
+		以下是前100名的讲师，榜单实时更新
+	</view>
+	<!-- <view class='howto'>
+		如何上榜?
+	</view> -->
+</view>
+
+<block wx:for="{{rankList}}" wx:key="index">
+	<view class='rank_item' bindtap='toDetail' data-id="{{item._id}}">
+		<view class='champion_icon'>
+			<image
+			 	wx:if="{{index==0}}"
+				src="{{'../../assets/icons/champion1.png'}}"
+			></image>
+			<image
+			 	wx:if="{{index==1}}"
+				src="{{'../../assets/icons/champion2.png'}}"
+			></image>
+			<image
+			 	wx:if="{{index==2}}"
+				src="{{'../../assets/icons/champion3.png'}}"
+			></image>
+		</view>
+		<view class='info'>
+			<view class='base'>
+				<view class='name'>
+					{{item.name}}
+				</view>
+				<view class='grade'>
+					{{item.grade}}
+				</view>
+				<view class='subject'>
+					{{item.subject}}
+				</view>
+			</view>
+			<view class='detail'>
+				{{item.detail}}
+			</view>
+			<view class='city'>
+				<image
+					src="{{'../../assets/icons/city.png'}}"
+				></image>
+				<view class='city_name'>
+					{{item.city||item.add}}
+				</view>
+			</view>
+		</view>
+		<view class='profile'>
+			<ListItem photoId="{{item.photoId}}"/>	
+		</view>
+	</view>
+</block>
+
+<view class='no_more' wx:if="{{rankList.length<100}}">
+	暂无更多家教信息
+</view>

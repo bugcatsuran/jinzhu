@@ -1,0 +1,10 @@
+page{
+	height: 100%;
+}
+.nomes_container{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #999;
+}

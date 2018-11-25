@@ -1,0 +1,66 @@
+<view class='rank_classify'>
+	<navigator class='classify_item' url='../rankTeacher/rankTeacher'>
+		<image src='../../assets/icons/rank.png' class='classify1'/>
+		<view>家教排行</view>
+	</navigator>
+	<navigator class='classify_item' url='../main/main'>
+		<image src='../../assets/icons/remand.png' class='classify2'/>
+		<view>家教信息</view>
+	</navigator>
+</view>
+
+<view class='top'>
+	<view>
+		以下为每日需求，需求实时更新
+	</view>
+	<!-- <view class='howto'>
+		如何上榜?
+	</view> -->
+</view>
+
+<block wx:for="{{rankList}}" wx:key="index">
+	<view class='rank_item'>
+		<view class='fee'>
+			{{item.fee}}
+		</view>
+		<view class='champion_icon'>
+			<image
+			 	wx:if="{{index==0}}"
+				src="{{'../../assets/icons/hot1.png'}}"
+			></image>
+			<image
+			 	wx:if="{{index==1}}"
+				src="{{'../../assets/icons/hot2.png'}}"
+			></image>
+			<image
+			 	wx:if="{{index==2}}"
+				src="{{'../../assets/icons/hot3.png'}}"
+			></image>
+		</view>
+		<view class='info'>
+			<view class='base'>
+				<view class='grade'>
+					需教授：{{item.grade}} {{item.subject}}
+				</view>
+			</view>
+			<view class='time'>
+				授课时间：{{item.freeTime}}
+			</view>
+			<view>
+				微信号：{{item.contactWay}}
+			</view>
+			<view class='city'>
+				<image
+					src="{{'../../assets/icons/city.png'}}"
+				></image>
+				<view class='city_name'>
+					地点：{{item.city}} {{item.add}}
+				</view>
+			</view>
+		</view>
+	</view>
+</block>
+
+<view class='no_more' wx:if="{{rankList.length<100}}">
+	暂无更多需求信息
+</view>

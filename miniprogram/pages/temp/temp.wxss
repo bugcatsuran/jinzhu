@@ -1,0 +1,6 @@
+/* miniprogram/pages/temp/temp.wxss */
+.message_shell{
+	background: #fff;
+	height: 100%;
+	padding: 50rpx 30rpx;
+}

@@ -1,0 +1,122 @@
+<!-- 个人信息 -->
+<view class="user-info">
+  <view class="info-shell">
+		<!-- 教授学历 -->
+    <view class="info-row" bindtap="modifyInfo" data-key="grade">
+      <view class="text">需教授学历</view>
+      <view class="info-arrow">
+        <image mode="widthFix" src="../../assets/icons/arrow-r.png" class="icon">
+        </image>
+      </view>
+      <view class="item item-name">{{demandInfo.grade||""}}</view>
+    </view>
+
+		<!-- 教授学科 -->
+    <view class="info-row" bindtap="modifyInfo" data-key='subject'>
+      <view class="text">需教授学科</view>
+      <view class="info-arrow">
+        <image mode="widthFix" src="../../assets/icons/arrow-r.png" class="icon">
+        </image>
+      </view>
+      <view class="item item-name">{{demandInfo.subject||""}}</view>
+    </view>
+
+		<!-- 授课城市 -->
+    <view class="info-row" bindtap="toogleChooseCity" data-key="city">
+      <view class="text">授课城市</view>
+      <view class="info-arrow">
+        <image mode="widthFix" src="../../assets/icons/arrow-r.png" class="icon">
+        </image>
+      </view>
+      <view class="item item-name">{{demandInfo.city||""}}</view>
+    </view>
+
+    <!-- 授课地址 -->
+    <view class="info-row" bindtap="modifyInfo" data-key="add">
+      <view class="text">授课地址</view>
+      <view class="info-arrow">
+        <image mode="widthFix" src="../../assets/icons/arrow-r.png" class="icon">
+        </image>
+      </view>
+      <view class="item item-name">{{demandInfo.add||""}}</view>
+    </view>
+
+		<!-- 授课时间 -->
+    <view class="info-row" bindtap="modifyInfo" data-key='freeTime'>
+      <view class="text">授课时间</view>
+      <view class="info-arrow">
+        <image mode="widthFix" src="../../assets/icons/arrow-r.png" class="icon">
+        </image>
+      </view>
+      <view class="item item-name">{{demandInfo.freeTime||""}}</view>
+    </view>
+
+    <!-- 期望学校 -->
+    <view class="info-row" bindtap="modifyInfo" data-key='school'>
+      <view class="text">期望学校</view>
+      <view class="info-arrow">
+        <image mode="widthFix" src="../../assets/icons/arrow-r.png" class="icon">
+        </image>
+      </view>
+      <view class="item item-name">{{demandInfo.school||""}}</view>
+    </view>
+
+		<!-- 联系用微信号 -->
+    <view class="info-row" bindtap="modifyInfo" data-key='contactWay'>
+      <view class="text">微信号</view>
+      <view class="info-arrow">
+        <image mode="widthFix" src="../../assets/icons/arrow-r.png" class="icon">
+        </image>
+      </view>
+      <view class="item item-name">{{demandInfo.contactWay||""}}</view>
+    </view>
+
+    <!-- 期望费用 -->
+    <!-- <view class="info-row" bindtap="modifyInfo" data-key='fee'>
+      <view class="text">期望费用</view>
+      <view class="info-arrow">
+        <image mode="widthFix" src="../../assets/icons/arrow-r.png" class="icon">
+        </image>
+      </view>
+      <view class="item item-name">{{demandInfo.fee||""}}</view>
+    </view> -->
+
+  </view>
+
+  <!-- 通用弹窗 -->
+  <Modal show="{{showModal}}" height="auto">
+    <view class='modal-content'>
+      <view class='pwd_title'>请输入</view>
+      <input bindinput="input" value="{{inputValue}}" class='pwd_shell' focus="{{true}}" adjust-position="{{true}}">
+      </input>
+      <view class='exitIf'>
+        <view bindtap='cancleModal'>取消</view>
+        <view bindtap='sureModal'>确定</view>
+      </view>
+    </view>
+  </Modal>
+
+  <!-- 发布 -->
+  <view class="success" bindtap="publish">发布更新</view>
+
+	<!-- 下架 -->
+  <view 
+		class="warn" 
+		bindtap="out" 
+		wx:if="{{demandInfo._id}}">
+		下架需求
+	</view>
+
+
+	<!-- 选择城市弹窗 -->
+	<view class="cover" wx:if="{{chooseCity}}" bindtap="toogleChooseCity">
+		<view class="modify">
+			<view class="modify-title">设置城市</view>
+			<view class="modify-item {{demandInfo.city==item.name?'modify-item-active':''}}" wx:for="{{cityData}}" wx:key="index"
+			bindtap="chooseCity"  data-value="{{item.name}}">
+				{{item.name}}
+			</view>
+		</view>
+	</view>
+	
+</view>

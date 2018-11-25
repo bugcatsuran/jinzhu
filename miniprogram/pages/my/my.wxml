@@ -1,0 +1,113 @@
+<view class="">
+
+	<view class='user-pcenter'>
+		<view class='clear avator-shell'>
+			<image 
+				src="{{userInfo.avatarUrl||'../../assets/image/user-unlogin.png'}}" 
+				class="avator-icon" 
+				mode="aspectFill">
+			</image>
+
+			<button class="go-login-shell nick"	wx:if="{{authUserInfo}}">
+				{{userInfo.nickName}}
+			</button>
+
+			<button
+				class='go-login-shell'
+				open-type="getUserInfo" 
+				bindgetuserinfo="bindGetUserInfo"
+				wx:else
+			>
+				点击登录
+			</button>
+
+			<!-- <view class="arrow-shell">
+      	<image 
+					src="../../assets/icons/arrow-r.png" 
+					class="vip-icon">
+				</image>
+    	</view> -->
+		</view>
+	</view>
+
+	<view class='role' bindtap='chooseRole'>
+		<view>我的身份（{{roleDefine[role]}}）</view>
+	</view>
+
+	<view class='role' bindtap='goResume' wx:if="{{role == 2}}">
+		<view>我的简历</view>
+	</view>
+
+	<view class='role' bindtap='goDemand' wx:if="{{role == 3}}">
+		<view>我的需求</view>
+	</view>
+
+	<!-- <view class='role' bindtap='goFeedback'>
+		反馈建议
+	</view> -->
+
+	<!-- 弹窗 -->
+	<Modal
+		show="{{showModal}}"
+		height="40%"
+	>	
+		<view class='modal-content'>
+			<button
+				style="width:90%"
+				type='primary'
+				bindtap='ImTeacher'
+			>
+				我是家教
+			</button>
+			<button
+				style="width:90%"
+				bindtap='ImParent'
+				type='primary'
+			>
+				我是家长
+			</button>
+		</view>
+	</Modal>
+
+	<!-- 退出登录 -->
+  <view class="exit" bindtap="exit" wx:if="{{authUserInfo}}">退出登录</view>
+
+  <!-- 退出登录弹窗 -->
+  <view class='cover2' wx:if="{{showExit}}">
+    <view class='exitShell'>
+      <view class='exitAsk'>您确定要退出登录？</view>
+      <view class='exitIf'>
+        <view bindtap='cancleExit'>取消</view>
+        <view bindtap='sureExit'>确定</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+	
+
+<!-- <view class="container">
+
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{userInfo.avatarUrl||'../../assets/image/user-unlogin.png'}})"
+    ></button>
+    <view>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+    </view>
+  </view>
+
+  <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>我的身份（未选择）</text>
+    </view>
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view>
+
+</view> -->

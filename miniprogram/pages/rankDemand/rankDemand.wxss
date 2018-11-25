@@ -1,0 +1,113 @@
+.top{
+	height: 80rpx;
+	background:rgb(248, 248, 248);
+	color: rgb(143, 143, 143);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 28rpx;
+}
+.howto{
+	color:red;
+	text-decoration: underline;
+	margin-left: 10rpx;
+}
+
+.rank_item{
+	height: 250rpx;
+	border-bottom: 1rpx solid rgb(227, 227, 227);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 40rpx;
+	position: relative;
+	background: #fff;
+}
+.champion_icon{
+	padding-right: 50rpx;
+}
+.champion_icon image{
+	width: 80rpx;
+	height: 80rpx;
+}
+.profile image{
+	width: 150rpx;
+	height: 200rpx;
+	background: #f6f6f6;
+	border-radius: 10rpx;
+}
+.info{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 200rpx;
+	padding: 0 20rpx;
+	flex: 1;
+}
+.base{
+	display: flex;
+	align-items: baseline;
+}
+.name{
+	font-size: 32rpx;
+}
+.grade{
+}
+.subject{
+}
+.detail{
+	color: #999;
+	font-size: 25rpx;
+	line-height: 30rpx;
+	max-height: 90rpx;
+	text-overflow: ellipsis;
+	overflow: hidden; 
+}
+.city {
+	display: flex;
+	align-items: center;
+}
+.city image{
+	width: 30rpx;
+	height: 30rpx;
+}
+.city_name{
+	font-size: 30rpx;
+	margin-left: 10rpx;
+}
+.fee{
+	color: orange;
+	position: absolute;
+	top: 80rpx;
+	right: 20rpx;
+	font-size: 40rpx;
+	font-weight: bolder;
+	transform: rotate(10deg)
+}
+
+
+/* 老大要变换需求和界面 我只能把main的代码copy来了 */
+.rank_classify{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 30rpx 0;
+	background: #fff;
+}
+.classify_item{
+	padding: 20rpx;
+	display: flex;
+	align-items: center;
+	width: 40%;
+	border-radius: 20rpx;
+	box-shadow: 0 0 10rpx #e1e1e1;
+}
+.classify1{
+	width: 100rpx;
+	height: 100rpx;
+}
+.classify2{
+	width: 100rpx;
+	height: 100rpx;
+	margin-right: 15rpx;
+}

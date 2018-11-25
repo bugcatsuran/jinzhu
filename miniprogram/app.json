@@ -1,0 +1,54 @@
+{
+  "pages": [
+		"pages/rankDemand/rankDemand",
+    "pages/main/main",
+    "pages/index/index",
+    "pages/message/message",
+    "pages/rankTeacher/rankTeacher",
+    "pages/my/my",
+    "pages/myResume/myResume",
+    "pages/myDemand/myDemand",
+    "pages/detailResume/detailResume",
+    "pages/detailDemand/detailDemand",
+    "pages/temp/temp"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffd706",
+    "navigationBarTitleText": "金猪助学",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#333",
+    "borderStyle": "#fff",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/rankDemand/rankDemand",
+        "text": "主页",
+        "iconPath": "assets/icons/home1.png",
+        "selectedIconPath": "assets/icons/home2.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "assets/icons/chat1.png",
+        "selectedIconPath": "assets/icons/chat2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "assets/icons/my1.png",
+        "selectedIconPath": "assets/icons/my2.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 3000,
+    "connectSocket": 3000,
+    "uploadFile": 3000,
+    "downloadFile": 3000
+  }
+}

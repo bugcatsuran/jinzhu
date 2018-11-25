@@ -1,0 +1,19 @@
+<!--components/tab/tab.wxml-->
+<view class="tab">
+	<block 
+		wx:for="{{list}}" 
+		wx:key="{{index}}" 
+		wx:for-item="tab"
+	>
+		<view
+			bindtap='selectTab'
+			data-value="{{tab.value}}"
+			class='tab_item_shell'
+		>
+			<view 
+				class="{{active==tab.value? 'tab_item_active tab_item':'tab_item'}}">
+				{{tab.name}}
+			</view>	
+		</view>
+	</block>
+</view>

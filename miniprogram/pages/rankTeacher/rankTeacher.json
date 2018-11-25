@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+		"ListItem": "../../components/listItem/listItem"
+	},
+	"navigationBarTitleText": "家教排行榜"
+}
